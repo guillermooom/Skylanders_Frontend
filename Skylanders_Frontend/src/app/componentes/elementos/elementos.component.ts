@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Elementos } from '../../Entidades/Elementos';
 import { ElementoService } from '../../Services/elemento.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-elementos',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './elementos.component.html',
   styleUrl: './elementos.component.css'
 })
