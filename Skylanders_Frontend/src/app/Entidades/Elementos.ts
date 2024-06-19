@@ -1,4 +1,4 @@
 export class Elementos{
     id:number;
-    nombre:String;
+    nombre:string;
 }

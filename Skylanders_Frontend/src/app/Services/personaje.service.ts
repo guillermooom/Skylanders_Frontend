@@ -15,4 +15,5 @@ export class PersonajeService {
  obtenerPersonajes():Observable<Personajes[]>{
    return this.httpClient.get<Personajes[]>(`${this.baseURL}/all`)
  }
+
 }

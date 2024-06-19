@@ -1,13 +1,29 @@
 <h1>Todos Personajes</h1>
-<p>
-@for(personaje of personajes; track personaje){
-    
-    @if(personaje.edicion){
-        <b>{{personaje.edicion}} {{personaje.nombre}}</b>
-    }@else{
-        {{personaje.nombre}}
-    }
-    
-    <br>
-}
-</p>
+<button (click)="limpiarFiltros()">Limpiar</button>
+<button (click)="ordernarNombre()">Ordenar Nombre</button>
+<button (click)="ordernarElemento()">Ordenar Elemento</button>
+<button (click)="elementoAire()">Ver Aire</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Elemento</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(personaje of personajes; track personaje){
+            <tr>
+                <td>
+                    {{personaje.id}}
+                    @if(personaje.edicion){
+                        <b>{{personaje.edicion}} {{personaje.nombre}}</b>
+                    }@else{
+                        {{personaje.nombre}}
+                    }
+                </td>
+
+                <td>{{personaje.elemento.nombre}}</td>
+            </tr>
+        }
+    </tbody>
+    </table>

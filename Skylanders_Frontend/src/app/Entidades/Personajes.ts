@@ -1,8 +1,11 @@
+import { Elementos } from "./Elementos";
+import { Saga } from "./Saga";
+
 export class Personajes{
     id: number;           
     nombre: string;       
-    elemento: string;   
-    saga: string;         
+    elemento: Elementos;   
+    saga: Saga;         
     edicion: string;   
     serie: string;      
     equipo: string;      
