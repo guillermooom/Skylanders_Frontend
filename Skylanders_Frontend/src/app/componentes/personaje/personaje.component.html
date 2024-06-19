@@ -1,1 +1,13 @@
-<p>personaje works!</p>
+<h1>Todos Personajes</h1>
+<p>
+@for(personaje of personajes; track personaje){
+    
+    @if(personaje.edicion){
+        <b>{{personaje.edicion}} {{personaje.nombre}}</b>
+    }@else{
+        {{personaje.nombre}}
+    }
+    
+    <br>
+}
+</p>
