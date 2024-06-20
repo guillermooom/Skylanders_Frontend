@@ -3,6 +3,17 @@
 <button (click)="ordernarNombre()">Ordenar Nombre</button>
 <button (click)="ordernarElemento()">Ordenar Elemento</button>
 <button (click)="elementoAire()">Ver Aire</button>
+
+
+
+    <select id="elem" name="elemen" [(ngModel)]="elementoId">
+        @for(elemento of elementos; track elemento){
+            <option [value]="elemento.id">{{elemento.nombre}}</option>
+        }
+    </select>
+    <button (click)="filtrarElemento()">Filtrar</button>
+
+
 <table class="table">
     <thead>
       <tr>
