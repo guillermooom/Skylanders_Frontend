@@ -21,7 +21,7 @@ export class PersonajeComponent implements OnInit{
   personajes_clear:Personajes[];
   elementos:Elementos[];
 
-  elementoId:number;
+  elementoId:number=1;
 
   constructor(private personajeService:PersonajeService, private router:Router){}
 
