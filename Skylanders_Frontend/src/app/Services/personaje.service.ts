@@ -16,4 +16,8 @@ export class PersonajeService {
    return this.httpClient.get<Personajes[]>(`${this.baseURL}/all`)
  }
 
+ obtenerPersonajesId(id:string):Observable<Personajes>{
+  return this.httpClient.get<Personajes>(`${this.baseURL}/all/${id}`)
+}
+
 }

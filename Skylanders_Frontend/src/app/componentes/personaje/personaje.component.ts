@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Personajes } from '../../Entidades/Personajes';
 import { PersonajeService } from '../../Services/personaje.service';
 import { Elementos } from '../../Entidades/Elementos';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-personaje',
@@ -15,7 +16,7 @@ export class PersonajeComponent implements OnInit{
   personajes:Personajes[];
   personajes_clear:Personajes[];
 
-  constructor(private personajeService:PersonajeService){}
+  constructor(private personajeService:PersonajeService, private router:Router){}
 
   ngOnInit(): void {
     this.obtenerElementos();
@@ -26,6 +27,10 @@ export class PersonajeComponent implements OnInit{
       this.personajes = dato;
       this.personajes_clear = dato.slice();
     });
+  }
+
+  verDetalles(id:string){
+    this.router.navigate(['personaje-detalle',id]);
   }
 
   ordernarElemento() {

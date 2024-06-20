@@ -2,7 +2,7 @@ import { Elementos } from "./Elementos";
 import { Saga } from "./Saga";
 
 export class Personajes{
-    id: number;           
+    id: string;           
     nombre: string;       
     elemento: Elementos;   
     saga: Saga;         

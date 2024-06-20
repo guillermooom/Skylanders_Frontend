@@ -3,6 +3,7 @@ import { ElementosComponent } from './componentes/elementos/elementos.component'
 import { AppComponent } from './app.component';
 import { SagaComponent } from './componentes/saga/saga.component';
 import { PersonajeComponent } from './componentes/personaje/personaje.component';
+import { DetallesPersonajeComponent } from './componentes/detalles-personaje/detalles-personaje.component';
 
 export const routes: Routes = [
     /*{path: '', redirectTo: 'index',pathMatch:'full'},
@@ -10,5 +11,6 @@ export const routes: Routes = [
     {path: 'elementos', component: ElementosComponent},
     {path: 'sagas', component: SagaComponent},
     {path: 'personajes', component: PersonajeComponent},
+    {path: 'personaje-detalle/:id', component: DetallesPersonajeComponent},
 ];
 
