@@ -1,0 +1,29 @@
+<button (click)="volverSagas()">Volver</button>
+<br>
+<h3>{{saga.nombre}}</h3>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Elemento</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(personaje of personajes; track personaje){
+            <tr>
+                <td>
+                    {{personaje.id}}
+                    @if(personaje.edicion){
+                        <b>{{personaje.edicion}} {{personaje.nombre}}</b>
+                    }@else{
+                        {{personaje.nombre}}
+                    }
+                </td>
+
+                <td>{{personaje.elemento.nombre}}</td>
+                <td><button (click)="verDetalles(personaje.id)">Detalles</button></td>
+            </tr>
+        }
+    </tbody>
+    </table>

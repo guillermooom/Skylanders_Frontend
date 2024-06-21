@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Saga } from '../../Entidades/Saga';
 import { SagaService } from '../../Services/saga.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-saga',
@@ -13,7 +14,7 @@ export class SagaComponent implements OnInit{
   
   sagas:Saga[];
 
-  constructor(private sagaService:SagaService){}
+  constructor(private sagaService:SagaService,private router:Router){}
 
   ngOnInit(): void {
     this.obtenerSagas();
@@ -24,6 +25,10 @@ export class SagaComponent implements OnInit{
       console.log(dato);
       this.sagas = dato;
     });
+  }
+
+  verDetalles(id:number){
+    this.router.navigate(['saga-detalle',id]);
   }
 
 }

@@ -3,6 +3,7 @@
 @for(saga of sagas; track saga){
     {{saga.id}}
     {{saga.nombre}}
+    <button (click)="verDetalles(saga.id)">Detalles</button>
     <br>
 }
 </p>
