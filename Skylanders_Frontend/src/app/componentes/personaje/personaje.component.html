@@ -14,7 +14,7 @@
     <button (click)="filtrarElemento()">Filtrar</button>
 
 
-<table class="table">
+<!--<table class="table">
     <thead>
       <tr>
         <th>Nombre</th>
@@ -38,4 +38,21 @@
             </tr>
         }
     </tbody>
-    </table>
+    </table>-->
+<div class="listado">
+    @for(personaje of personajes; track personaje){
+        <div class="card">
+            <img src="assets/personajes/chop_chop.png">
+                @if(personaje.edicion){
+                    <p><b>{{personaje.edicion}}</b> {{personaje.nombre}}</p>
+                }@else{
+                    <p>{{personaje.nombre}}</p>
+                }
+                {{personaje.saga.nombre}}          
+            <button (click)="verDetalles(personaje.id)">Detalles</button>
+        </div>
+        
+
+    }
+</div>
+    
