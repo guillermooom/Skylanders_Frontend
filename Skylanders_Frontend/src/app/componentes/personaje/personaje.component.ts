@@ -44,7 +44,7 @@ export class PersonajeComponent implements OnInit{
   }
 
   verDetalles(id:string){
-    this.router.navigate(['personaje-detalle',id]);
+    this.router.navigate(['personajes',id]);
   }
 
   ordernarElemento() {

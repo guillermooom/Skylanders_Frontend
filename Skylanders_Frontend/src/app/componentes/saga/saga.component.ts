@@ -28,7 +28,7 @@ export class SagaComponent implements OnInit{
   }
 
   verDetalles(id:number){
-    this.router.navigate(['saga-detalle',id]);
+    this.router.navigate(['sagas',id]);
   }
 
 }

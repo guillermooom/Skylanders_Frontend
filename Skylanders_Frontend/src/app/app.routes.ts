@@ -5,14 +5,20 @@ import { SagaComponent } from './componentes/saga/saga.component';
 import { PersonajeComponent } from './componentes/personaje/personaje.component';
 import { DetallesPersonajeComponent } from './componentes/detalles-personaje/detalles-personaje.component';
 import { DetallesSagaComponent } from './componentes/detalles-saga/detalles-saga.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ListadoPersonajesComponent } from './pages/listado-personajes/listado-personajes.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
     /*{path: '', redirectTo: 'index',pathMatch:'full'},
     {path: 'index', component: AppComponent},*/
+    {path: '', redirectTo: 'home',pathMatch:'full'},
+    {path: 'home', component: HomeComponent},
     {path: 'elementos', component: ElementosComponent},
     {path: 'sagas', component: SagaComponent},
-    {path: 'saga-detalle/:id', component: DetallesSagaComponent},
-    {path: 'personajes', component: PersonajeComponent},
-    {path: 'personaje-detalle/:id', component: DetallesPersonajeComponent},
+    {path: 'sagas/:id', component: DetallesSagaComponent},
+    {path: 'personajes', component: ListadoPersonajesComponent},
+    {path: 'personajes/:id', component: DetallesPersonajeComponent},
+    {path: '**', component: NotFoundComponent},
 ];
 
