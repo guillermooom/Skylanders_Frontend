@@ -1,0 +1,23 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/*estilo para la figura
+img{
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin:50px 0;
+}*/
+.page p{
+    font-size: 18px;
+}
+
+img{
+    height: 400px;
+    width: 450px;
+    margin:50px 0;
+}
