@@ -19,6 +19,7 @@ export const routes: Routes = [
     {path: 'sagas/:id', component: DetallesSagaComponent},
     {path: 'personajes', component: ListadoPersonajesComponent},
     {path: 'personajes/:id', component: DetallesPersonajeComponent},
-    {path: '**', component: NotFoundComponent},
+    {path: 'not_found', component: NotFoundComponent},
+    {path: '**', redirectTo: 'not_found',pathMatch:'full'},
 ];
 
