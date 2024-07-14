@@ -7,6 +7,7 @@
     align-items: center;
 }
 .header a{
+    color: black;
     text-decoration: none;
     transition: 0.5s;
 }
