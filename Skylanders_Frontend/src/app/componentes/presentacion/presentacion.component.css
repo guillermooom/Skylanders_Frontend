@@ -12,9 +12,22 @@
     justify-content: right;
     align-items: start;
      */
+     
 }
 .loader img{
    margin:50px;
    width: 400px;
    height: 175px;
+   animation: zoomOut 2s ease-out;
 }
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1.2);
+      opacity: 0.1;
+    }
+    to {
+        transform: scale(1);
+      opacity: 1;
+    }
+  }
