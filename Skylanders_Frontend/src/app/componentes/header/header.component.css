@@ -12,7 +12,7 @@
     transition: 0.5s;
 }
 .header a:hover{
-    font-size: 25px;
+    font-weight: bold;
     transition: 0.5s;
 }
 
