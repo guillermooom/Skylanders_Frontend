@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../componentes/header/header.component";
 import { PresentacionComponent } from "../../componentes/presentacion/presentacion.component";
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,12 @@ import { PresentacionComponent } from "../../componentes/presentacion/presentaci
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  ngOnInit() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 
 }

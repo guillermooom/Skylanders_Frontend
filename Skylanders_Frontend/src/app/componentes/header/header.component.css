@@ -1,10 +1,12 @@
 .header{
     background-color: #94d3f2;
-    height: 100px;
+    height: 75px;
     display: flex;
     flex-direction:row ;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top:0;
 }
 .header a{
     color: black;
