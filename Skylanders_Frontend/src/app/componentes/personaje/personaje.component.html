@@ -38,11 +38,15 @@
             </tr>
         }
     </tbody>
-    </table>-->
+    </table>
+    
+    
+   
+    -->
 <div class="listado">
     @for(personaje of personajes; track personaje){
         <div class="card">
-            <img src="assets/personajes/chop_chop.png">
+            <img src="assets/personajes/{{personaje.id}}.png" (error)="imageError($event)">
                 @if(personaje.edicion){
                     <p><b>{{personaje.edicion}}</b> {{personaje.nombre}}</p>
                 }@else{

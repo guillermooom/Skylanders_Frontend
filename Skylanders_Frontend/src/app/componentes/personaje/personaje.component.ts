@@ -17,6 +17,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class PersonajeComponent implements OnInit{
 
+  imageError(event: any) {
+    event.target.src = 'assets/personajes/skylanders_error.png'
+    
+  }
+
   personajes:Personajes[];
   personajes_clear:Personajes[];
   elementos:Elementos[];
