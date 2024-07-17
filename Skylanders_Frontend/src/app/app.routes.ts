@@ -6,6 +6,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ListadoPersonajesComponent } from './pages/listado-personajes/listado-personajes.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SagaComponent } from './pages/saga/saga.component';
+import { SagaDetallesComponent } from './pages/saga-detalles/saga-detalles.component';
 
 export const routes: Routes = [
     /*{path: '', redirectTo: 'index',pathMatch:'full'},
@@ -14,7 +15,7 @@ export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'elementos', component: ElementosComponent},
     {path: 'sagas', component: SagaComponent},
-    {path: 'sagas/:id', component: DetallesSagaComponent},
+    {path: 'sagas/:id', component: SagaDetallesComponent},
     {path: 'personajes', component: ListadoPersonajesComponent},
     {path: 'personajes/:id', component: DetallesPersonajeComponent},
     {path: 'not_found', component: NotFoundComponent},
