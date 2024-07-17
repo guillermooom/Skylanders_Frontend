@@ -1,5 +1,16 @@
 <app-header></app-header>
 <button (click)="volverSagas()">Volver</button>
-@if(saga == '2'){
-    <app-giants></app-giants>
+@switch(saga){
+
+    @case('1'){
+
+    }
+
+    @case('2'){
+       <app-giants></app-giants> 
+    }
+    
+    @default{
+        {{irError()}}
+    }
 }
