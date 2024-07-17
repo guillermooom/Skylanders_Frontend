@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Saga } from '../../Entidades/Saga';
-import { SagaService } from '../../Services/saga.service';
-import { PersonajeService } from '../../Services/personaje.service';
 import { Personajes } from '../../Entidades/Personajes';
+import { ListadoSagaService } from '../../Services/listado-saga.service';
 
 @Component({
   selector: 'app-detalles-saga',
@@ -14,7 +13,7 @@ import { Personajes } from '../../Entidades/Personajes';
 })
 export class DetallesSagaComponent implements OnInit{
   
-  constructor(private route:ActivatedRoute, private router:Router, private saga_service:SagaService){}
+  constructor(private route:ActivatedRoute, private router:Router, private saga_service:ListadoSagaService){}
   
   id:number;
   saga:Saga;
