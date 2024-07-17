@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Saga } from '../../Entidades/Saga';
-import { SagaService } from '../../Services/saga.service';
 import { Router } from '@angular/router';
+import { ListadoSagaService } from '../../Services/listado-saga.service';
 
 @Component({
-  selector: 'app-saga',
+  selector: 'app-listado-saga',
   standalone: true,
   imports: [],
-  templateUrl: './saga.component.html',
-  styleUrl: './saga.component.css'
+  templateUrl: './listado-saga.component.html',
+  styleUrl: './listado-saga.component.css'
 })
-export class SagaComponent implements OnInit{
-  
+export class ListadoSagaComponent implements OnInit{
+
+   
   sagas:Saga[];
 
-  constructor(private sagaService:SagaService,private router:Router){}
+  constructor(private sagaService:ListadoSagaService,private router:Router){}
 
   ngOnInit(): void {
     this.obtenerSagas();
@@ -30,5 +31,4 @@ export class SagaComponent implements OnInit{
   verDetalles(id:number){
     this.router.navigate(['sagas',id]);
   }
-
 }
