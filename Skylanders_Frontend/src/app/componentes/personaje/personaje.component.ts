@@ -28,6 +28,8 @@ export class PersonajeComponent implements OnInit{
 
   elementoId:number=1;
 
+  nombre: String="";
+
   constructor(private personajeService:PersonajeService, private router:Router){}
 
   ngOnInit(): void {
@@ -71,6 +73,11 @@ export class PersonajeComponent implements OnInit{
   filtrarElemento(){
     this.personajes = this.personajes_clear.slice();
     this.personajes = this.personajes.filter(personaje => personaje.elemento.id == this.elementoId);
+  }
+
+  buscarNombre(){
+    this.personajes = this.personajes_clear.slice();
+    this.personajes = this.personajes.filter(personaje => personaje.nombre.toLocaleLowerCase().includes(this.nombre.toLocaleLowerCase()));
   }
   
 }
