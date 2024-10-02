@@ -73,8 +73,21 @@ export class PersonajeComponent implements OnInit{
 
   buscarNombre(){
     this.personajes = this.personajes_clear.slice();
-    this.personajes = this.personajes.filter(personaje => personaje.nombre.toLocaleLowerCase().includes(this.nombre.toLocaleLowerCase()));
-    this.nombre="";
+  
+    const busqueda = this.nombre.toLocaleLowerCase().trim(); // Eliminar espacios en blanco
+  
+    this.personajes = this.personajes.filter(personaje => {
+      const nombre = personaje.nombre ? personaje.nombre.toLocaleLowerCase() : '';
+      const edicion = personaje.edicion ? personaje.edicion.toLocaleLowerCase() : '';
+  
+    const coincideNombre = nombre.includes(busqueda);
+    const coincideEdicion = edicion.includes(busqueda);
+    return coincideNombre || coincideEdicion;
+
+    });
+  
+    this.nombre = "";
   }
+    
   
 }
