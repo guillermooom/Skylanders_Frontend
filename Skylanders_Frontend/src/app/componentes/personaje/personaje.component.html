@@ -2,7 +2,6 @@
 <button (click)="limpiarFiltros()">Limpiar</button>
 <button (click)="ordernarNombre()">Ordenar Nombre</button>
 <button (click)="ordernarElemento()">Ordenar Elemento</button>
-<button (click)="elementoAire()">Ver Aire</button>
 
 
 
@@ -49,7 +48,7 @@
 <div class="listado">
     @for(personaje of personajes; track personaje){
         <div class="card">
-            <img src="assets/personajes/{{personaje.id}}.png" (error)="imageError($event)">
+            <img src="assets/iconos-personajes/{{personaje.id}}.png" (error)="imageError($event)">
                 @if(personaje.edicion){
                     <p><b>{{personaje.edicion}}</b> {{personaje.nombre}}</p>
                 }@else{

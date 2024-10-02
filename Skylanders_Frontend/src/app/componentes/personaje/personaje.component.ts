@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
 export class PersonajeComponent implements OnInit{
 
   imageError(event: any) {
-    event.target.src = 'assets/personajes/skylanders_error.png'
+    event.target.src = 'assets/iconos-personajes/skylanders_error.png'
     
   }
 
@@ -66,10 +66,6 @@ export class PersonajeComponent implements OnInit{
     this.personajes = this.personajes_clear.slice();
   }
 
-  elementoAire(){
-    this.personajes = this.personajes.filter(personaje => personaje.elemento.id === 2);
-   }
-
   filtrarElemento(){
     this.personajes = this.personajes_clear.slice();
     this.personajes = this.personajes.filter(personaje => personaje.elemento.id == this.elementoId);
@@ -78,6 +74,7 @@ export class PersonajeComponent implements OnInit{
   buscarNombre(){
     this.personajes = this.personajes_clear.slice();
     this.personajes = this.personajes.filter(personaje => personaje.nombre.toLocaleLowerCase().includes(this.nombre.toLocaleLowerCase()));
+    this.nombre="";
   }
   
 }
