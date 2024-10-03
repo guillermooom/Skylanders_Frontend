@@ -47,15 +47,16 @@
     -->
 <div class="listado">
     @for(personaje of personajes; track personaje){
-        <div class="card">
+        <div class="card" (click)="verDetalles(personaje.id)" class="{{personaje.elemento.nombre}}">
             <img src="assets/iconos-personajes/{{personaje.id}}.png" (error)="imageError($event)">
                 @if(personaje.edicion){
                     <p><b>{{personaje.edicion}}</b> {{personaje.nombre}}</p>
                 }@else{
                     <p>{{personaje.nombre}}</p>
                 }
-                {{personaje.saga.nombre}}          
-            <button (click)="verDetalles(personaje.id)">Detalles</button>
+                {{personaje.saga.nombre}}
+                <img src="assets/elementos/iconos/{{personaje.elemento.id}}.png">
+                
         </div>
         
 

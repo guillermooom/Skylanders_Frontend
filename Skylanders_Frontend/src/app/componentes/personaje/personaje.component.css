@@ -7,11 +7,24 @@
 .card{
     border: 2px solid black;
     display: flex;
-    flex-direction: column;
-    width: 200px;
+    flex-direction: row;
+    width: 550px;
     align-items: center;
+    justify-content: space-around;
     padding:10px 0;
     margin:20px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+@media (max-width :575px){
+    .card{
+        flex-direction: column;
+        width: 250px;
+    }
+}
+.card:hover{
+    background-color: white;
+    transition: 0.5s;
 }
 .card img{
     width: 100px;
@@ -19,4 +32,29 @@
 }
 button{
     margin:10px 0 0 0;
+}
+/* FONDO SEGUN ELEMENTO */
+.Vida{
+    background-color: rgb(0, 223, 0);
+}
+.Aire{
+    background-color: rgb(6, 240, 248);
+}
+.Agua{
+    background-color: rgb(101, 125, 255);
+}
+.Tierra{
+    background-color: rgb(175, 122, 43);
+}
+.Tecnologia{
+    background-color: orange;
+}
+.Magia{
+    background-color: rgb(231, 73, 231);
+}
+.Muertos{
+    background-color: rgb(187, 187, 187);
+}
+.Fuego{
+    background-color: rgb(226, 100, 100);
 }
