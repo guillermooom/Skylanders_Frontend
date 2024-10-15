@@ -1,6 +1,18 @@
 <button (click)="volverListado()">Volver</button>
-<h3>{{personaje.nombre}}</h3>
-<p>Elemento: {{personaje.elemento.nombre}}</p>
-<p>Saga: {{personaje.saga.nombre}}</p>
-<p>Equipo: {{personaje.equipo}}</p>
-<p>Edicion: {{personaje.edicion}}</p>
+<br>
+<section>
+    <article>
+        
+        @if(personaje.edicion){
+            <h3 class="{{personaje.elemento.nombre}}"><img class="elemento" src="assets/elementos/iconos/{{personaje.elemento.id}}.png"> {{personaje.edicion}} {{personaje.nombre}}</h3>
+        }@else{
+            <h3 class="{{personaje.elemento.nombre}}"><img class="elemento" src="assets/elementos/iconos/{{personaje.elemento.id}}.png"> {{personaje.nombre}}</h3>
+        }
+        <img class="personaje" src="assets/personajes/{{personaje.id}}.png">
+       
+        <p><b>Saga:</b> {{personaje.saga.nombre}}</p>
+        @if(personaje.equipo){
+            <p><b>Rol:</b> {{personaje.equipo}}</p>
+        }
+    </article>
+</section>
