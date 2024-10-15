@@ -29,4 +29,8 @@ export class DetallesPersonajeComponent implements OnInit{
     this.router.navigate(['personajes']);
   }
 
+  verSaga(id:number){
+    this.router.navigate(['sagas',id]);
+  }
+
 }

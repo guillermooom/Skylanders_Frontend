@@ -24,6 +24,14 @@ article > h3{
 article > p {
     padding: 0 20px;
 }
+a{
+    transition: 0.5s;
+}
+a:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    font-style: italic;
+}
 
 /* FONDO SEGUN ELEMENTO */
 .Vida{

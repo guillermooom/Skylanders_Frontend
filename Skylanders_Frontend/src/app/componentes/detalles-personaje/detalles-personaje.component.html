@@ -10,7 +10,7 @@
         }
         <img class="personaje" src="assets/personajes/{{personaje.id}}.png">
        
-        <p><b>Saga:</b> {{personaje.saga.nombre}}</p>
+        <p><b>Saga:</b> <a (click)="verSaga(personaje.saga.id)">{{personaje.saga.nombre}}</a></p>
         @if(personaje.equipo){
             <p><b>Rol:</b> {{personaje.equipo}}</p>
         }
