@@ -1,19 +1,25 @@
 <h1>Todos Personajes</h1>
-<button (click)="limpiarFiltros()">Limpiar</button>
-<button (click)="ordernarNombre()">Ordenar Nombre</button>
-<button (click)="ordernarElemento()">Ordenar Elemento</button>
+<section class="filtros">
+    <div>
+        <input type="text" placeholder="Nombre" [(ngModel)]="nombre">
+        <button class="buscar" (click)="buscarNombre()"><img src="assets/lupa.png">Buscar</button> 
+    </div>
 
-
-
-    <select id="elem" name="elemen" [(ngModel)]="elementoId">
-        @for(elemento of elementos; track elemento){
-            <option [value]="elemento.id">{{elemento.nombre}}</option>
-        }
-    </select>
-    <button (click)="filtrarElemento()">Filtrar</button>
-
-    <input type="text" placeholder="Nombre" [(ngModel)]="nombre">
-    <button (click)="buscarNombre()">Buscar</button>
+    <div>
+        <button (click)="limpiarFiltros()">Limpiar</button>
+        <button (click)="ordernarNombre()">Ordenar Nombre</button>
+        <button (click)="ordernarElemento()">Ordenar Elemento</button>
+        
+        <select id="elem" name="elemen" [(ngModel)]="elementoId">
+            @for(elemento of elementos; track elemento){
+                <option [value]="elemento.id">{{elemento.nombre}}</option>
+            }
+        </select>
+        <button (click)="filtrarElemento()">Filtrar</button>
+    </div>
+    
+       
+</section>
 
 
 <!--<table class="table">
